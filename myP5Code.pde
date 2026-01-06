@@ -6,6 +6,10 @@ void setup() {
 //🎯Varaible Declarations Go Here
 var x = 200;
 var y = 100;
+var eyeSize = 15;
+var randRED = random(0, 225);
+var randGREEN = random(0, 225);
+var randBLUE = random(0, 225);
 
 //🟢Draw Procedure - Runs on Repeat
 void draw(){
@@ -15,6 +19,7 @@ void draw(){
   
   noStroke();
   fill(30, 204, 91); // a nice froggy green!
+  fill(randRED, randGREEN, randBLUE);
 
   ellipse(x, y, 200, 100); // face
   ellipse(x - 50, y - 50, 40, 40); // left eye socket
@@ -23,6 +28,19 @@ void draw(){
   fill(255, 255, 255); // for the whites of the eyes!
   ellipse(x - 50, y - 50, 30, 30); // left eyeball
   ellipse(x + 50, y - 50, 30, 30); // right eyeball
+
+  fill(0, 0, 0)
+  ellipse(x - 50, y - 50, eyeSize, eyeSize); // pupil left
+  ellipse(x + 50, y - 50, eyeSize, eyeSize); // pupil right 
+
+  ellipse(x - 0, y + 27, 70, 40); //mouth
+
+  x = mouseX;
+  y = mouseY;
+
+ 
+
+
   
 
 }
